@@ -2,51 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preload" href="./assets/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./assets/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <title>Newsletter sign-up form</title>
 </head>
 <body>
+  <main class="page">
+    <section class="card" aria-live="polite">
+      <div class="card__content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="benefits" aria-label="Newsletter benefits">
+          <li><img src="./assets/images/icon-list.svg" alt="">Product discovery and building what matters</li>
+          <li><img src="./assets/images/icon-list.svg" alt="">Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg" alt="">And much more!</li>
+        </ul>
 
-  <!-- Sign-up form start -->
+        <form class="form" id="signup-form" novalidate>
+          <div class="form__group" id="email-group">
+            <div class="form__labels">
+              <label for="email">Email address</label>
+              <span class="form__error" id="email-error" aria-live="polite">Valid email required</span>
+            </div>
+            <input class="input" type="email" id="email" name="email" placeholder="email@company.com" required>
+          </div>
+          <button class="button" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
 
-  Stay updated!
+      <picture class="card__illustration" aria-hidden="true">
+        <source media="(min-width: 900px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+      </picture>
+    </section>
 
-  Join 60,000+ product managers receiving monthly updates on:
+    <section class="success" id="success-panel" hidden>
+      <div class="success__body">
+        <img class="success__icon" src="./assets/images/icon-success.svg" alt="">
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <strong id="success-email">ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription.</p>
+      </div>
+      <button class="button" type="button" id="dismiss-button">Dismiss message</button>
+    </section>
+  </main>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/">Your Name Here</a>.
   </div>
+
+  <script src="./main.js" defer></script>
 </body>
 </html>
