@@ -70,6 +70,11 @@ main,
   gap: 18px;
 }
 
+.card__illustration{
+  padding: 20px;
+}
+
+
 h1 {
   font-size: clamp(2rem, 1.5vw + 1.5rem, 3rem);
   margin: 0;
@@ -245,19 +250,19 @@ label {
   }
 
   .card {
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     border-radius: var(--radius-card);
     box-shadow: var(--shadow);
   }
 
   .card__illustration {
-    order: 0;
+    order: 1;
   }
 
   .card__content {
-    padding: 48px 52px 52px;
-    gap: 20px;
+    padding: 60px 64px;
+    gap: 24px;
   }
 
   .benefits {
