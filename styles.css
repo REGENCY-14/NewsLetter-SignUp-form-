@@ -33,7 +33,7 @@ body {
   margin: 0;
   font-family: "Roboto", system-ui, -apple-system, sans-serif;
   color: var(--clr-dark-slate);
-  background: var(--clr-dark-slate);
+  background: var(--clr-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,8 +56,8 @@ main,
 
 .card {
   background: var(--clr-white);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow);
+  border-radius: 0;
+  box-shadow: none;
   display: grid;
   grid-template-columns: 1fr;
   overflow: hidden;
@@ -200,25 +200,27 @@ label {
 .success {
   background: var(--clr-white);
   color: var(--clr-dark-slate);
-  border-radius: var(--radius-card);
-  padding: 32px;
-  box-shadow: var(--shadow);
+  border-radius: 0;
+  padding: 42px 32px 32px;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: min(460px, 100%);
+  gap: 32px;
+  width: 100%;
   margin: 0 auto;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .success__body {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
 }
 
 .success__icon {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
 }
 
 [hidden] {
@@ -239,11 +241,14 @@ label {
 @media (min-width: 900px) {
   body {
     padding: 32px;
+    background: var(--clr-dark-slate);
   }
 
   .card {
     grid-template-columns: 1.05fr 0.95fr;
     align-items: stretch;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow);
   }
 
   .card__illustration {
@@ -261,5 +266,13 @@ label {
 
   .form {
     gap: 16px;
+  }
+
+  .success {
+    width: min(460px, 100%);
+    padding: 48px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow);
+    min-height: auto;
   }
 }
