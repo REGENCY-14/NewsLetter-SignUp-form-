@@ -71,7 +71,8 @@ main,
 }
 
 .card__illustration{
-  padding: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 
