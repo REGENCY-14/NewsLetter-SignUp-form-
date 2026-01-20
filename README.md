@@ -15,7 +15,7 @@ A responsive email newsletter subscription form with built-in validation and suc
 
 - **HTML5** – Semantic markup with form elements and accessibility features
 - **CSS3** – Custom properties, Grid/Flexbox layout, responsive media queries
-- **Vanilla JavaScript** – Form handling, validation, and DOM manipulation
+- **JavaScript** – Form handling, validation, and DOM manipulation
 - **Local Fonts** – Roboto (400, 700) bundled locally
 
 ## Project Structure
