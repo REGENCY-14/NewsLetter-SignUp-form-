@@ -154,12 +154,12 @@ label {
 
 .form__group.has-error .input {
   border-color: var(--clr-tomato);
-  background: hsl(4, 100%, 67%, 0.12);
+  background: hsl(4, 100%, 67%, 0.25);
   color: var(--clr-tomato);
 }
 
 .form__group.has-error .input::placeholder {
-  color: hsl(4, 100%, 67%, 0.8);
+  color: var(--clr-tomato);
 }
 
 .form__group.has-error .form__error {
